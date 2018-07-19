@@ -6,18 +6,41 @@
   <body>
 
     <a-scene light="defaultLightsEnabled: false">
+    <a-sphere color="blue" radius="6" height="2" width="2">
+      <a-animation attribute="position"
+        dur="3000"
+        from="-5 0 0"
+        to="5 0 0"
+        repeat="indefinite"></a-animation>
+        <a-animation attribute="material.color" from="blue" to="tomato" dur=3000 repeat="indefinite"></a-animation>
+        <a-animation attribute="scale" dur="1000" from="0 0 0" to= "10 10 10"
+        direction="linear" easing="ease-in-out-circ" repeat="indefinite"></a-animation>
+    </a-sphere>
+    
+    <!--<a-sphere src="./assets/wall-texture.jpg" position = "0 0 0" radius = "6">  -->
+    <!--  <a-animation-->
+    <!--      attribute="rotation"-->
+    <!--      dur="10000"-->
+    <!--      fill="none"-->
+    <!--      from="0 0 0"-->
+    <!--      to="0 360 0"-->
+    <!--      easing="linear"-->
+    <!--      repeat="indefinite">-->
+       
+       
 
       <!-- light source element -->
-      <!-- <a-entity light="type: ambient"></a-entity> -->
+       <a-entity light="type: ambient"></a-entity> 
 
       <!-- our camera aka user perspective element -->
-      <!-- <a-entity camera look-controls wasd-controls position="0 0 15"></a-entity> -->
+       <a-entity camera look-controls wasd-controls position="0 0 15"></a-entity> 
 
       <!-- our initial sphere in the center of the scene -->
       <!-- your sphere here! -->
 
     </a-scene>
-
+    
+     
     <script src="./index.js"></script>
   </body>
 
